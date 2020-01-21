@@ -46,7 +46,8 @@ import edu.wpi.first.wpilibj.VictorSP;
 @SuppressWarnings("deprecation")
 
 public class Robot extends TimedRobot {
-    DifferentialDrive robotDrive;
+    public static Object driveSubsystem;
+	DifferentialDrive robotDrive;
     // Talon frontLeft, frontRight, rearLeft, rearRight;
     Spark frontLeft, frontRight, rearLeft, rearRight;
 
