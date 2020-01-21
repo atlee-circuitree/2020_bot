@@ -1,16 +1,21 @@
-package frc.robot;
-
-
+package frc.robot.subsystems;
+import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 
-import edu.wpi.first.wpilibj.XboxController;
-import edu.wpi.first.wpilibj.buttons.Button;
-import edu.wpi.first.wpilibj.SampleRobot;
+//@SuppressWarnings("deprecation")
 
-@SuppressWarnings("deprecation")
-
-public class Pnumatics extends SampleRobot
+public class climbPnumaticSubsystem extends SubsystemBase
 {
-    DoubleSolenoid Shooter = new DoubleSolenoid(1, 3, 4);
-	DoubleSolenoid piston2 = new DoubleSolenoid(1, 5, 6);
+    DoubleSolenoid leftClimbPnumatic = new DoubleSolenoid(1, 5, 6);
+    DoubleSolenoid rightClimbPnumatic = new DoubleSolenoid(1, 5, 6);
+
+public climbPnumaticSubsystem()
+{
+    
+}
+    public void periodic() 
+    {
+
+
+    }
 }
