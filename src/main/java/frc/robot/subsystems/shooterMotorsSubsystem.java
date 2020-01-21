@@ -8,12 +8,21 @@
 package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import edu.wpi.first.wpilibj.Spark;
+import edu.wpi.first.wpilibj.XboxController;
+import edu.wpi.first.wpilibj.buttons.Button;
+import edu.wpi.first.wpilibj.SampleRobot;
+import edu.wpi.first.wpilibj.SpeedController;
 
-shooterMotorsSubsystem extends SubsystemBase {
-  /**
-   * Creates a new ExampleSubsystem.
-   */
-  public shooterMotorSubsystem() {
+@SuppressWarnings("deprecation")
+
+  public class Motors extends SampleRobot{
+    private static final int kMotorPort = 0;
+   
+
+
+
+
 
     
   
