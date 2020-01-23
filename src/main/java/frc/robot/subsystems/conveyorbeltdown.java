@@ -8,32 +8,17 @@
 package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
-import edu.wpi.first.wpilibj.Spark;
 
-@SuppressWarnings("deprecation")
-
-  public class shooterMotorsSubsystem extends SubsystemBase{
-  
-    Spark motor;
-
-  
- public shooterMotorsSubsystem() 
-  {      
-  
-  
-  Spark leftmotorshooter = new Spark(); //dont' know the ports yet
-  Spark rightmotorshooter = new Spark(); 
-
+public class ExampleSubsystem extends SubsystemBase {
+  /**
+   * Creates a new ExampleSubsystem.
+   */
+  public ExampleSubsystem() {
 
   }
-      
-public void moveForward()
-{
-    motor.setSpeed(1);
-}
 
-public void moveBackward()
-{
-    motor.setSpeed(-1);
-}
+  @Override
+  public void periodic() {
+    // This method will be called once per scheduler run
+  }
 }
