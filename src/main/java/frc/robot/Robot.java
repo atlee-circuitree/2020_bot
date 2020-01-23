@@ -146,11 +146,11 @@ public class Robot extends TimedRobot {
            robotDrive.tankDrive(-stick.getY(Hand.kLeft)/2, -stick.getY(Hand.kRight)/2);
            Timer.delay(2.0);
            
-           if (XboxController.getAButton()) {
+           //if (XboxController.getAButton()) {
 
                  
 
-           }
+           //}
     
 
        }
