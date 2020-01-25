@@ -10,33 +10,33 @@ package frc.robot.subsystems;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import com.revrobotics.CANSparkMax;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import com.revrobotics.CANDigitalInput;
 
-@SuppressWarnings("deprecation")
 
   public class shooterMotorsSubsystem extends SubsystemBase{
   
-  private static final int leftDeviceID = 1; 
-  private static final int rightDeviceID = 2;
+  private static final int leftDeviceID = ; //Need to assign Device ID at a later date
+  private static final int rightDeviceID = ;
   private CANSparkMax m_leftMotor;
   private CANSparkMax m_rightMotor;
+  private CANDigitalInput m_forwardLimit;
+  private CANDigitalInput m_reverseLimit;
+ 
 
-  
  public shooterMotorsSubsystem() 
   {      
-  
     m_leftMotor = new CANSparkMax(leftDeviceID, MotorType.kBrushless);
     m_rightMotor = new CANSparkMax(rightDeviceID, MotorType.kBrushless);
-
-
   }
+@Override
+    public void periodic() {
       
-public void moveForward()
-{
-    motor.setSpeed(1);
-}
+      m_forwardLimit.enableLimitSwitch(SmartDashboard.getBoolean("Forward Limit Enabled", false));
+      m_reverseLimit.enableLimitSwitch(SmartDashboard.getBoolean("Reverse Limit Enabled", false));  
+      
+      SmartDashboard.putBoolean("Forward Limit Switch", m_forwardLimit.get());
+      SmartDashboard.putBoolean("Reverse Limit Switch", m_reverseLimit.get());
 
-public void moveBackward()
-{
-    motor.setSpeed(-1);
-}
-}
+    }
+  }

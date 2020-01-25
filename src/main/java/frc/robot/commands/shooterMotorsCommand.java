@@ -9,7 +9,7 @@ package frc.robot.commands;
 
 import frc.robot.subsystems.shooterMotorsSubsystem;
 import edu.wpi.first.wpilibj2.command.CommandBase;
-import edu.wpi.first.wpilibj.XboxController;
+
 
 /**
  * An example command that uses an example subsystem.
@@ -17,11 +17,7 @@ import edu.wpi.first.wpilibj.XboxController;
 public class shooterMotorsCommand extends CommandBase {
   @SuppressWarnings({"PMD.UnusedPrivateField", "PMD.SingularField"})
   private final shooterMotorsSubsystem m_shooterMotorsSubsystem;
-  /**
-   * Creates a new ExampleCommand.
-   *
-   * @param subsystem The subsystem used by this command.
-   */
+
   public shooterMotorsCommand(shooterMotorsSubsystem subsystem) {
     m_shooterMotorsSubsystem = subsystem;
     addRequirements(m_shooterMotorsSubsystem);
@@ -30,6 +26,7 @@ public class shooterMotorsCommand extends CommandBase {
   public void initialize() {
 
   }
+
   
   @Override
   public void execute() {
