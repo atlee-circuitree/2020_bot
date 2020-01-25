@@ -8,21 +8,24 @@
 package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
-import edu.wpi.first.wpilibj.Spark;
+import com.revrobotics.CANSparkMax;
+import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 
 @SuppressWarnings("deprecation")
 
   public class shooterMotorsSubsystem extends SubsystemBase{
   
-    Spark motor;
+  private static final int leftDeviceID = 1; 
+  private static final int rightDeviceID = 2;
+  private CANSparkMax m_leftMotor;
+  private CANSparkMax m_rightMotor;
 
   
  public shooterMotorsSubsystem() 
   {      
   
-  
-  Spark leftmotorshooter = new Spark(); //dont' know the ports yet
-  Spark rightmotorshooter = new Spark(); 
+    m_leftMotor = new CANSparkMax(leftDeviceID, MotorType.kBrushless);
+    m_rightMotor = new CANSparkMax(rightDeviceID, MotorType.kBrushless);
 
 
   }

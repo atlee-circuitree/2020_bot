@@ -30,10 +30,10 @@ public class shooterMotorsCommand extends CommandBase {
   public void initialize() {
 
   }
-
+  
   @Override
   public void execute() {
-    XboxController buXboxController = new
+    
   }
 
   // Called once the command ends or is interrupted.

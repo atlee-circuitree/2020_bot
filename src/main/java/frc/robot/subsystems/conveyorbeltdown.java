@@ -8,17 +8,20 @@
 package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import edu.wpi.first.wpilibj.Spark;
 
-public class ExampleSubsystem extends SubsystemBase {
-  /**
-   * Creates a new ExampleSubsystem.
-   */
-  public ExampleSubsystem() {
+public class conveyorbeltSubsystem extends SubsystemBase {
+
+  Spark motor;
+  
+ public conveyorbeltSubsystem() {
+    
+    Spark leftmotorconveyorbelt = new Spark(); //dont' know the ports yet
+    Spark rightmotorconveyorbelt = new Spark(); 
 
   }
 
-  @Override
   public void periodic() {
-    // This method will be called once per scheduler run
+   
   }
 }
